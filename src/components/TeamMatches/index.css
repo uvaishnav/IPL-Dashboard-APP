@@ -1,0 +1,335 @@
+/* Write your CSS here */
+.team-matches-main-container {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.CSK-gradient {
+  background: linear-gradient(
+    135deg,
+    #ffdd00 0%,
+    #ffa500 25%,
+    #1e3d72 75%,
+    #0f2557 100%
+  );
+}
+
+.MI-gradient {
+  background: linear-gradient(
+    135deg,
+    #004ba0 0%,
+    #0066cc 25%,
+    #ffdd00 75%,
+    #ffa500 100%
+  );
+}
+
+.RCB-gradient {
+  background: linear-gradient(
+    135deg,
+    #c8102e 0%,
+    #ff1744 25%,
+    #ffdd00 75%,
+    #ffa500 100%
+  );
+}
+
+.KKR-gradient {
+  background: linear-gradient(
+    135deg,
+    #2e0854 0%,
+    #4a148c 25%,
+    #ffdd00 75%,
+    #ffa500 100%
+  );
+}
+
+.SH-gradient {
+  background: linear-gradient(
+    135deg,
+    #ff6600 0%,
+    #ff8533 25%,
+    #000000 75%,
+    #333333 100%
+  );
+}
+
+.RR-gradient {
+  background: linear-gradient(
+    135deg,
+    #e91e63 0%,
+    #ff4081 25%,
+    #2196f3 50%,
+    #ffdd00 100%
+  );
+}
+
+.KXP-gradient {
+  background: linear-gradient(
+    135deg,
+    #c8102e 0%,
+    #ff1744 25%,
+    #c0c0c0 75%,
+    #ffdd00 100%
+  );
+}
+
+.DC-gradient {
+  background: linear-gradient(
+    135deg,
+    #004ba0 0%,
+    #0066cc 25%,
+    #c8102e 75%,
+    #ff1744 100%
+  );
+}
+
+.team-matches-main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.team-matches-main-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.match-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.team-banner-container {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.team-banner-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 2;
+}
+
+.team-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-banner-container:hover .team-banner-img {
+  transform: scale(1.05);
+}
+
+.team-matches-main-container h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff;
+  margin: 2rem 0 3rem 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.team-matches-main-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  border-radius: 2px;
+}
+
+.recent-match-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0 2rem;
+  margin: 3rem auto 0;
+  max-width: 1400px;
+}
+
+.recent-match-cards-container li {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  .recent-match-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .team-banner-container {
+    height: 250px;
+  }
+
+  .team-matches-main-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .recent-match-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team-banner-container {
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+
+  .team-matches-main-container h1 {
+    font-size: 2.2rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recent-match-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .team-banner-container {
+    height: 180px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .team-matches-main-container h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-matches-main-container {
+    padding-bottom: 2rem;
+  }
+
+  .team-banner-container {
+    height: 150px;
+  }
+
+  .team-matches-main-container h1 {
+    font-size: 1.6rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .recent-match-cards-container {
+    margin: 2rem auto 0;
+  }
+}
+
+.team-matches-main-container .match-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.CSK-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 221, 0, 0.2),
+    rgba(30, 61, 114, 0.8)
+  );
+}
+
+.MI-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 75, 160, 0.8),
+    rgba(255, 221, 0, 0.2)
+  );
+}
+
+.RCB-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(200, 16, 46, 0.8),
+    rgba(255, 221, 0, 0.2)
+  );
+}
+
+.KKR-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 8, 84, 0.8),
+    rgba(255, 221, 0, 0.2)
+  );
+}
+
+.SRH-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 102, 0, 0.8),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+.RR-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(233, 30, 99, 0.8),
+    rgba(33, 150, 243, 0.6)
+  );
+}
+
+.PBKS-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(200, 16, 46, 0.8),
+    rgba(192, 192, 192, 0.4)
+  );
+}
+
+.DC-gradient .match-spinner {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 75, 160, 0.8),
+    rgba(200, 16, 46, 0.4)
+  );
+}
