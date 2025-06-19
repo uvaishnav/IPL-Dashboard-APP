@@ -1,24 +1,6 @@
-In this project, let's build an **IPL Dashboard App** by applying the concepts we have learned till now.
+In this project, I have build an **IPL Dashboard App** 
 
-### Refer to the image below:
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-output-v2.gif" alt="ipl-dashboard-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-### Design Files
-
-<details>
-<summary>Click to view</summary>
-
-- [Extra Small (Size < 576px) and Small (Size >= 576px) - Home](https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-home-sm-output.png)
-- [Extra Small (Size < 576px) and Small (Size >= 576px) - Team Matches](https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-team-matches-sm-output-v2.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Home](https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-home-lg-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Team Matches](https://assets.ccbp.in/frontend/content/react-js/ipl-dashboard-team-matches-lg-output-v2.png)
-
-</details>
 
 ### Set Up Instructions
 
@@ -29,10 +11,10 @@ In this project, let's build an **IPL Dashboard App** by applying the concepts w
 - Start up the app using `npm start`
 </details>
 
-### Completion Instructions
+### Implementation Details
 
 <details>
-<summary>Functionality to be added</summary>
+<summary>Functionality added</summary>
 <br/>
 
 The app must have the following functionalities
@@ -136,85 +118,13 @@ Returns a response containing details of all recent matches of a team
 
 </details>
 
-<details>
-<summary>Components Structure</summary>
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/home-component-structure-img.png" alt="home component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
 
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/team-matches-component-structure-img.png" alt="team matches component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
 
-</details>
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
 
-Use these files to complete the implementation:
 
-- `src/App.js`
-- `src/components/Home/index.js`
-- `src/components/Home/index.css`
-- `src/components/TeamCard/index.js`
-- `src/components/TeamCard/index.css`
-- `src/components/TeamMatches/index.js`
-- `src/components/TeamMatches/index.css`
-- `src/components/LatestMatch/index.js`
-- `src/components/LatestMatch/index.css`
-- `src/components/MatchCard/index.js`
-- `src/components/MatchCard/index.css`
-</details>
 
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- To display the animated loader, we need to import the Loader component using the below statement
-
-  ```
-  import Loader from 'react-loader-spinner'
-  ```
-
-- In order to display the given animated loader, pass the `type` and `color` props to the `Loader` component with values as **Oval** and **#ffffff** , respectively
-
-  ```
-  <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  ```
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- The banner image in the Team Matches Route should have the alt attribute value as `team banner`
-- The alt attribute values for the images received from the response are given in the **Example response**
-- The API responses received from the given api URLs should be converted to camel case
-- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as `loader` to it as shown below
-  ```
-  <div testid="loader">
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />
-  </div>
-  ```
-- Render HomeRoute component when path in URL matches `/`
-- Render TeamMatchesRoute component when path in URL matches `/team-matches/:id`
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js` file
-- Each TeamMatchesRoute should have different gradient colors as background based on the selected team
-
-</details>
 
 ### Resources
 
@@ -267,11 +177,4 @@ Use these files to complete the implementation:
 
 - Bree Serif
 
-</details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
